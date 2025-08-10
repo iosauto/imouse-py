@@ -10,11 +10,18 @@
 - 本项目仅适用于 **iMouse XP 版**，支持标准 iOS 无越狱环境直接控制,无需安装第三方插件和APP。
 - 必须使用配套的iMouse硬件才能完成控制操作。
 
-📦 **淘宝购买硬件** 👉 [https://imouse.taobao.com](https://imouse.taobao.com)
+**官网地址** 👉 [https://www.imouse.cc](https://www.imouse.cc)  
+**淘宝购买硬件** 👉 [https://imouse.taobao.com](https://imouse.taobao.com)
+
+- **GitHub** https://github.com/iosauto/imouse-py
+- **Gitee** https://gitee.com/iosusb/imouse-py
 
 ---
 
 ## 🚀 快速开始
+
+- 使用前先使用pip安装imouse-py包
+- pip install imouse-py
 
 ## 使用api类基础接口调用
 

@@ -203,7 +203,7 @@ def usb_change(usb_info: UsbInfo):
 
 
 @event.on("airplay_connect_log")
-def usb_change(message: str):
+def airplay_connect_log(message: str):
     print(f"[事件]自动投屏日志->{message}")
 
 

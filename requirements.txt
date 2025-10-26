@@ -1,0 +1,11 @@
+annotated-types==0.7.0
+certifi==2025.7.9
+charset-normalizer==3.4.2
+colorlog==6.9.0
+idna==3.10
+pydantic==2.10.6
+pydantic_core==2.27.2
+requests==2.32.4
+typing_extensions==4.13.2
+urllib3==2.2.3
+websocket-client==1.8.0

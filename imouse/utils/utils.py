@@ -41,7 +41,7 @@ def file_to_base64(file_path: str) -> str:
 
 
 def clean_surrogates(text: str) -> str:
-    """清理非法 surrogate 字符（如 \ud800 - \udfff）"""
+    """清理非法 surrogate 字符（如 ud800 - udfff）"""
     return re.sub(r'[\ud800-\udfff]', '?', text)
 
 

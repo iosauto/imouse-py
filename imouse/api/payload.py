@@ -1,6 +1,6 @@
 from imouse.models.response import ImServerConfigData
 from imouse.types import SetDeviceParams, SetDeviceAirplayParams, MouseSwipeParams, MultiColorParams, \
-    AlbumFileParams, PhoneFileParams
+    AlbumFileParams, PhoneFileParams, SendHidParams
 
 from typing import Optional, List
 
@@ -115,7 +115,7 @@ class Payload:
         return self._build_payload('/key/sendkey',
                                    {"id": device_id, "key": key, "fn_key": fn_key}, data)
 
-    def key_sendhid(self, device_id: str, command_list: List[str], data: dict = None) -> dict:
+    def key_sendhid(self, device_id: str, command_list: List[SendHidParams], data: dict = None) -> dict:
         return self._build_payload('/key/sendhid',
                                    {"id": device_id, "list": command_list}, data)
 

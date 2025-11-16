@@ -1,8 +1,10 @@
+# -*- coding: utf-8 -*-
+
 from setuptools import setup, find_packages
 
 setup(
     name="imouse-py",  # 包名
-    version="0.0.2",  # 版本号
+    version="0.0.4",  # 版本号
     author="iMouse",
     author_email="your_email@example.com",
     description="iMouse设备自动化控制库一个基于客户端-服务端架构的Python库,用于自动化控制iOS设备",

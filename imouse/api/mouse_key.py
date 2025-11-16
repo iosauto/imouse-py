@@ -3,7 +3,7 @@ from typing import Optional, List, Union
 
 from imouse.models import CommonResponse
 from imouse.api import Payload
-from imouse.types import MouseSwipeParams
+from imouse.types import MouseSwipeParams, SendHidParams
 from imouse.utils.utils import parse_model
 
 
@@ -76,7 +76,7 @@ class MouseKey():
         )
         return parse_model(CommonResponse, ret) if ret is not None else None
 
-    def key_sendhid(self, device_id, command_list: List[str]) -> Optional[CommonResponse]:
+    def key_sendhid(self, device_id, command_list: List[SendHidParams]) -> Optional[CommonResponse]:
         """https://www.imouse.cc/XP%E7%89%88API%E6%96%87%E6%A1%A3/%E9%BC%A0%E6%A0%87%E9%94%AE%E7%9B%98/%E9%94%AE%E7%9B%98%E9%AB%98%E7%BA%A7%E6%93%8D%E4%BD%9C"""
         ret = self._call_api(
             self._payload.key_sendhid(device_id, command_list)

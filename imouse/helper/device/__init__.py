@@ -1,3 +1,4 @@
+import time
 from typing import Optional, TYPE_CHECKING
 from .image import Image
 from .keyboard import KeyBoard
@@ -29,7 +30,7 @@ class Device:
         self._error_code = None
         self._error_msg = None
 
-    def successful(self, common_response):
+    def successful(self, common_response, delay: float = 0):
         try:
             if common_response.status != 200:
                 self._set_error(common_response.status, common_response.message)
@@ -39,6 +40,7 @@ class Device:
                 self._set_error(common_response.data.code, common_response.data.message)
                 return False
             self._clear_error()
+            time.sleep(delay)
             return True
         except Exception as e:
             self._set_error(-1, f"解析响应失败: {e}")
